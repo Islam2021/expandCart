@@ -1,0 +1,8 @@
+{
+
+    "scripts": {
+        "scss": "sass --watch --style=compressed assets/scss/styles.scss assets/scss/styles.min.css",
+        "prod:scss": "node-sass assets/scss/styles.scss assets/scss/styles.min.css --output-style compressed"
+    }
+
+}

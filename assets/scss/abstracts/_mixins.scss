@@ -1,0 +1,51 @@
+// start @mixin
+@mixin bordered($width, $color) {
+    border: $width solid $color;
+}
+
+@mixin border-radius($pixel...) {
+    border-radius: $pixel;
+}
+
+@mixin transition($type, $number, $mode) {
+    transition: $type $number $mode;
+    -webkit-transition: $type $number $mode;
+    -moz-transition: $type $number $mode;
+    -ms-transition: $type $number $mode;
+    -o-transition: $type $number $mode;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin($origin) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    transform-origin: $origin;
+}

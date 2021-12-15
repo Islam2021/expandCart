@@ -1,0 +1,17 @@
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+.btn:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-gray {
+    background-color: $gray-btn;
+    border: 1px solid $gray-btn-border;
+}
+
+.btn-primary {
+    background-color: $primary-btn;
+    border: 1px solid $primary-btn-border;
+}

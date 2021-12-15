@@ -1,0 +1,320 @@
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+main {
+    margin-top: 1.8rem;
+    .widget {
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        &__title,
+        &__product-number {
+            [dir="ltr"] & {
+                text-align: left;
+            }
+            [dir="rtl"] & {
+                text-align: right;
+            }
+            font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+            color: $widget-title-color;
+        }
+        &__group-list-item {
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 2rem;
+            }
+            position: relative;
+            .media {
+                // align-items: center;
+                display: flex;
+                .image {
+                    width: 6.4rem;
+                    height: 6.3rem;
+                    background-color: #E0E5EB;
+                    border: 1px solid #E0E5EB;
+                    margin-right: 1.1rem;
+                    @include border-radius(2px);
+                }
+                .media-body {
+                    .product-title {
+                        font-size: 1.3rem;
+                        color: $widget-title-color;
+                        font-weight: 400;
+                        font-family: Helvetica, Neue;
+                        width: 70%;
+                        margin-bottom: .7rem;
+                        [dir="ltr"] & {
+                            text-align: left;
+                        }
+                        [dir="rtl"] & {
+                            text-align: right;
+                        }
+                    }
+                    .product-details {
+                        [dir="ltr"] & {
+                            text-align: left;
+                        }
+                        [dir="rtl"] & {
+                            text-align: right;
+                        }
+                        font: normal normal 400 1.2rem/1.5rem Helvetica Neue;
+                        color: $widget-title-color;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .product-price {
+                [dir="ltr"] & {
+                    text-align: right;
+                }
+                [dir="rtl"] & {
+                    text-align: left;
+                }
+                font: normal normal 400 1.2rem/1.5rem Helvetica Neue;
+                color: $widget-title-color;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+        &__items {
+            margin: 1.4rem 0;
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: .7rem;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                h3 {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.2rem/1.5rem Helvetica Neue;
+                    color: $widget-title-color;
+                }
+                p {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.2rem/1.5rem Helvetica Neue;
+                    color: $widget-title-color;
+                }
+            }
+        }
+        &__content {
+            margin-top: 2.4rem;
+            .contactInfo,
+            .ShippingAddress {
+                [dir="ltr"] & {
+                    text-align: left;
+                }
+                [dir="rtl"] & {
+                    text-align: right;
+                }
+                font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                color: $widget-title-color;
+            }
+            .account,
+            .addNew {
+                [dir="ltr"] & {
+                    text-align: right;
+                }
+                [dir="rtl"] & {
+                    text-align: left;
+                }
+                font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                color: $widget-title-color;
+                a {
+                    color: $widget-title-color;
+                }
+            }
+            .addNew {
+                a {
+                    color: $ref-link-color;
+                }
+            }
+            .info-block {
+                border: 1px solid #E0E5EB;
+                width: 100%;
+                padding: 1.6rem 2.1rem;
+                @include border-radius(2px);
+                h3 {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                    color: $widget-title-color;
+                    margin-bottom: .5rem;
+                }
+                p {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                    color: $widget-title-color;
+                }
+            }
+            .shipping-method {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                .title {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                    color:$widget-title-color;
+                    margin-bottom: 2rem;
+                }
+            }
+            .select-address {
+                h2 {
+                    [dir="ltr"] & {
+                        text-align: left;
+                    }
+                    [dir="rtl"] & {
+                        text-align: right;
+                    }
+                    font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                    color:$widget-title-color;
+                    margin-bottom: 2rem;
+                }
+                .box-info {
+                    margin-top: 1rem;
+                    border: 1px solid #E0E5EB;
+                    .info {
+                        padding: 1.6rem 2.1rem;
+                        .information-lable {
+                            margin-bottom: 0;
+                            [dir="ltr"] & {
+                                text-align: left;
+                            }
+                            [dir="rtl"] & {
+                                text-align: right;
+                            }
+                            p {
+                                font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                                color: $widget-title-color;
+                                margin-bottom: .5rem;
+                            }
+                        }
+                        .edit-address {
+                            [dir="ltr"] & {
+                                text-align: left;
+                                margin-left: 3rem;
+                            }
+                            [dir="rtl"] & {
+                                text-align: right;
+                                margin-right: 3rem;
+                            }
+                            font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                            color:$ref-link-color;
+                            position: relative;
+                            top: 2rem;
+                        }
+                        .type {
+                            font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                            color: $widget-title-color;
+                            margin-bottom: .5rem;
+                        }
+                    }
+                    .map {
+                        height: 19.5rem;
+                        width: 100%;
+                        display: inline-block;
+                        overflow: hidden;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            margin-top: 2rem;
+                        }
+                        .view-map {
+                            width: 28rem;
+                            height: 27.5rem;
+                            @media (min-width: 768px) and (max-width: 990px) {
+                                width: 35rem;
+                            }
+                            @media (min-width: 320px) and (max-width: 768px) {
+                                width: 100%;
+                            }
+                            @media (min-width: 1367px) {
+                                width: 35rem;
+                            }
+                        }
+                    }
+                }
+                .checkbox-area {
+                    margin: 3rem 0;
+                }
+            }
+            .addNew-address {
+                margin-top: 2rem;
+                display: none;
+                .form-group {
+                    margin: .5rem 0;
+                    .btn-primary {
+                        padding: .7rem 2.7rem;
+                        font: normal normal 400 1.4rem /1.7rem Helvetica Neue;
+                        color: #fffeff;
+                    }
+                }
+                &.active {
+                    display: block;
+                }
+            }
+            .save-contnue {
+                margin-top: 5rem;
+                .btn-primary {
+                    padding: 1.2rem 0;
+                    font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                    color: #FFFEFF;
+                }
+            }
+        }
+        .navigation {
+            .nav {
+                .nav-item {
+                    width: 33.33333%;
+                    text-align: center;
+                    border-bottom: 1px solid #E0E5EB;
+                    padding-bottom: 1.7rem;
+                    position: relative;
+                    .nav-link {
+                        font: normal normal 400 1.6rem/1.9rem Helvetica Neue;
+                        letter-spacing: 0px;
+                        color: $widget-title-color;
+                        padding: 0;
+                        opacity: 1;
+                    }
+                    &.active {
+                        &:before {
+                            position: absolute;
+                            bottom: -2px;
+                            left: 0;
+                            content: "";
+                            width: 100%;
+                            height: 3px;
+                            background-color: $active-tab;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

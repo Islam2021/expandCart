@@ -1,0 +1,59 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+.navbar {
+    &.navbar-light {
+        height: 7.2rem;
+        background-color: $bg-header;
+    }
+    &__links {
+        width: 100%;
+        align-items: center;
+    }
+    &__logo {
+        .logo-link {
+            color: $logo-color;
+            font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+            text-decoration: none;
+            background-color: $gray-btn;
+            border: 1px solid $gray-btn-border;
+            padding: 1.5rem 7.1rem;
+            @media(min-width: 320px) and (max-width: 768px) {
+                padding: 1.5rem 4rem;
+            }
+        }
+    }
+    &__nav-header {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        .nav-item {
+            margin: 0 3.8rem;
+            &:last-child {
+                margin: 0;
+            }
+            .nav-link {
+                [dir="ltr"] & {
+                    text-align: left;
+                }
+                [dir="rtl"] & {
+                    text-align: right;
+                }
+                font: normal normal 400 1.4rem/1.7rem Helvetica Neue;
+                color: $widget-title-color;
+                padding: 0;
+            }
+        }
+        .dropdownList {
+            min-width: 20rem;
+            margin-top: 2rem;
+            .nav-item {
+                padding: 1rem
+            }
+            &.dropdownListOpen {
+                @include transform(scale(1));
+                opacity: 1;
+            }
+        }
+    }
+}
