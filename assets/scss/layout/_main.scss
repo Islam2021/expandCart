@@ -34,7 +34,12 @@ main {
                     height: 6.3rem;
                     background-color: #E0E5EB;
                     border: 1px solid #E0E5EB;
-                    margin-right: 1.1rem;
+                    [dir="ltr"] & {
+                        margin-right: 1.1rem;
+                    }
+                    [dir="rtl"] & {
+                        margin-left: 1.1rem;
+                    }
                     @include border-radius(2px);
                 }
                 .media-body {
@@ -68,14 +73,15 @@ main {
             .product-price {
                 [dir="ltr"] & {
                     text-align: right;
+                    right: 0;
                 }
                 [dir="rtl"] & {
                     text-align: left;
+                    left: 0;
                 }
                 font: normal normal 400 1.2rem/1.5rem Helvetica Neue;
                 color: $widget-title-color;
                 position: absolute;
-                right: 0;
                 top: 0;
             }
         }

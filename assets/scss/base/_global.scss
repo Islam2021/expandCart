@@ -12,6 +12,7 @@ html {
     margin: 0;
     height: 100%;
     background-color: $bg-page;
+    overflow-x: hidden;
     @media screen and (min-width: 320px) {
         font-size: 55%;
     }

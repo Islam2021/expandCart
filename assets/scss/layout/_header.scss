@@ -29,6 +29,7 @@
         display: flex;
         .nav-item {
             margin: 0 3.8rem;
+            position: relative;
             &:last-child {
                 margin: 0;
             }
